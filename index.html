@@ -1,84 +1,373 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yanty Makeup Wedding - MUA </title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yanty Makeup Wedding — Makeup Pengantin & Paket Lengkap</title>
+  <meta name="description" content="Yanty Makeup Wedding — Makeup Pengantin Wanita, dekorasi, dan paket pernikahan elegan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Yanty Makeup Wedding</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Top Bar -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="brand-mark">Y</span>
+        <span class="brand-text">
+          <strong>ANTY</strong> <em>Makeup Wedding</em>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navigasi utama">
+        <a href="#layanan">Layanan</a>
+        <a href="#paket">Paket</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak" class="btn btn-outline">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Yanty Makeup Wedding</h1>
-      <p>Elegance, Beauty, and Perfection for Your Special Day</p>
-      <a href="#services" class="btn">Explore Services</a>
+  <!-- Hero -->
+  <section class="hero" role="banner" aria-label="Sesi foto pengantin">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop" alt="Makeup pengantin elegan" class="hero-bg" />
+    <div class="container hero-inner">
+      <div class="hero-badge">Makeup & Events</div>
+      <h1 class="hero-title">Rias Pengantin Elegan,<br/>moment istimewa jadi abadi.</h1>
+      <p class="hero-text">Tim profesional untuk akad, resepsi, hingga sesi foto. Riasan tahan lama, detail couture, dan layanan ramah.</p>
+      <div class="hero-cta">
+        <a href="#paket" class="btn btn-primary">Lihat Paket</a>
+        <a href="#galeri" class="btn btn-ghost">Jelajahi Galeri</a>
+      </div>
+    </div>
+
+    <!-- Overlay services card -->
+    <aside class="overlay-card">
+      <h3 class="ov-title">Layanan Kami</h3>
+      <p class="ov-text">
+        Makeup Pengantin Wanita untuk Akad, Resepsi, Mapacci; penyediaan busana & hijab styling, aksesori, serta dekorasi venue maupun rumah. 
+        Konsultasi look & test makeup tersedia di studio.
+      </p>
+      <div class="ov-actions">
+        <a href="#paket" class="btn btn-thin">Paket Populer</a>
+        <a href="#kontak" class="btn btn-thin">Tanya Jadwal</a>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Tentang -->
+  <section id="tentang" class="section about">
+    <div class="container grid-2">
+      <div>
+        <h2 class="sec-title">Tentang Yanty</h2>
+        <p>Berfokus pada tampilan <em>timeless</em> yang menonjolkan fitur terbaik, kami memadukan teknik rias modern dengan sentuhan tradisional. Setiap pengantin mendapat konsultasi personal agar hasilnya sesuai karakter dan budaya.</p>
+        <ul class="check">
+          <li>Produk premium, tahan lama, dan nyaman</li>
+          <li>Hijab styling rapi & aman</li>
+          <li>Tim dekor siap untuk rumah/gedung</li>
+        </ul>
+      </div>
+      <figure class="about-photo">
+        <img src="https://ugliest-silver-z3l9eaneti.edgeone.app/WhatsApp%20Image%202025-08-17%20at%2017.37.22.jpeg" alt="Proses makeup pengantin">
+      </figure>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>Bridal Makeup</h3>
-        <p>Penampilan pengantin yang sempurna, disesuaikan dengan gaya dan kepribadian Anda.</p>
-      </div>
-      <div class="card">
-        <h3>Wedding Decoration</h3>
-        <p>Tema-tema yang dirancang dengan indah untuk membuat pernikahan Anda tak terlupakan.</p>
-      </div>
-      <div class="card">
-        <h3>Wedding Car Studio</h3>
-        <p>Nikmati Layanan makeup profesional dimana saja dengan Makeup Car Studio!. Kami datang langsung ke lokasi anda dengan studio makeup lengkap didalam mobil, siapmembuat anda tampil flawless untuk setiap acaraa-mulai dari pernikahan ,sesi foto, hingga acara spesial.</p>
+  <!-- Layanan ringkas -->
+  <section id="layanan" class="section services">
+    <div class="container">
+      <h2 class="sec-title center">Kategori Layanan</h2>
+      <div class="service-grid">
+        <article class="service">
+          <h3>Makeup Pengantin</h3>
+          <p>Akad, Resepsi, Mapacci—fokus pada ketahanan & kenyamanan sepanjang acara.</p>
+        </article>
+        <article class="service">
+          <h3>Busana & Aksesori</h3>
+          <p>Gaun/pakaian adat, kelengkapan hijab, aksesori berkualitas, hingga hand bouquet.</p>
+        </article>
+        <article class="service">
+          <h3>Dekorasi</h3>
+          <p>Dekor pelaminan, taman, photobooth, pagar VIP, HPL, dan pencahayaan.</p>
+        </article>
+        <article class="service">
+          <h3>Studio & Konsultasi</h3>
+          <p>Trial makeup dan konsultasi konsep untuk memastikan look impianmu.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://important-tan-yrguprogcf.edgeone.app/WhatsApp%20Image%202025-08-18%20at%2017.27.24.jpeg" alt="Makeup look">
-      <img src="https://inappropriate-aqua-rf3tm9nk65.edgeone.app/WhatsApp%20Image%202025-08-23%20at%2001.16.44.jpeg" alt="Wedding decoration">
-      <img src="https://vivid-turquoise-9qhdvy0zaq.edgeone.app/WhatsApp%20Image%202025-08-19%20at%2015.49.54.jpeg" alt="Wedding car">
-      <img src="https://many-maroon-5xe2sqqcpu.edgeone.app/WhatsApp%20Image%202025-08-23%20at%2001.11.12.jpeg" alt="Bridal atelier">
+  <!-- Paket -->
+  <section id="paket" class="section pricing">
+    <div class="container">
+      <h2 class="sec-title center">Paket Makeup Pengantin</h2>
+      <p class="center subtle">Semua paket sudah termasuk layanan profesional & pendampingan di hari-H. Klik kartu untuk melihat detail.</p>
+
+      <div class="pricing-grid">
+        <!-- 1x1 -->
+        <article class="card price" tabindex="0">
+          <header>
+            <h3>Package 1×1</h3>
+            <div class="price-tag">Rp 16.000.000</div>
+          </header>
+          <div class="price-body">
+            <h4>Makeup & Pakaian</h4>
+            <ul>
+              <li>1× Makeup (Akad/Resepsi)</li>
+              <li>1× Pakaian (Akad/Resepsi)</li>
+              <li>Kelengkapan Hijab, Sendal Adat, Accessories</li>
+              <li>Handbucket, Makeup di studio</li>
+            </ul>
+            <h4>Dekorasi Gedung & Hotel</h4>
+            <ul>
+              <li>Dekor Pelaminan & Kamar Pengantin</li>
+              <li>Dekor Taman + 2 Penuntun Jalan</li>
+              <li>Pargola Tengah 4×4 m, Photobooth, Pagar VIP</li>
+              <li>Lantai HPL, Lighting dekorasi standar, Fresnel</li>
+            </ul>
+            <h4>Free</h4>
+            <ul>
+              <li>1× Softlens, 1× Henna + Kuku</li>
+              <li>Makeup Pendamping 2</li>
+              <li>Kotak Seserahan 8 pcs + Hias</li>
+              <li>Baju Pagar Ayu 10, Bosara 12 pcs</li>
+            </ul>
+          </div>
+          <footer><a href="#kontak" class="btn btn-primary btn-block">Cek Ketersediaan</a></footer>
+        </article>
+
+        <!-- 1x2 -->
+        <article class="card price" tabindex="0">
+          <header>
+            <h3>Package 1×2</h3>
+            <div class="price-tag">Rp 18.000.000</div>
+          </header>
+          <div class="price-body">
+            <h4>Makeup & Pakaian</h4>
+            <ul>
+              <li>1× Makeup (Akad/Resepsi)</li>
+              <li>2× Pakaian (Akad/Resepsi)</li>
+              <li>Sendal Adat, Accessories, Handbucket</li>
+              <li>Makeup di Studio</li>
+            </ul>
+            <h4>Dekorasi (Gedung/Hotel)</h4>
+            <ul>
+              <li>Dekor Pelaminan & Kamar Pengantin</li>
+              <li>Dekor Taman, 2 Penuntun Jalan</li>
+              <li>2 Photobooth, Pagar VIP, Lantai HPL</li>
+              <li>Lighting dekorasi standar & Fresnel</li>
+            </ul>
+            <h4>Free</h4>
+            <ul>
+              <li>1× Softlens, 1× Henna + Kuku</li>
+              <li>Makeup pendamping 2 org</li>
+              <li>Kotak seserahan 8 pcs + Hias</li>
+              <li>Baju Pagar Ayu 10, Bosara 10 pcs</li>
+            </ul>
+          </div>
+          <footer><a href="#kontak" class="btn btn-primary btn-block">Cek Ketersediaan</a></footer>
+        </article>
+
+        <!-- 2x2 -->
+        <article class="card price" tabindex="0">
+          <header>
+            <h3>Package 2×2</h3>
+            <div class="price-tag">Rp 21.000.000</div>
+          </header>
+          <div class="price-body">
+            <h4>Makeup & Pakaian</h4>
+            <ul>
+              <li>2× Makeup (Mapacci, Akad & Resepsi)</li>
+              <li>2× Pakaian (Mapacci, Akad & Resepsi)</li>
+              <li>Kelengkapan Hijab, Sendal Adat, Accessories</li>
+              <li>Handbucket, Makeup di Studio</li>
+            </ul>
+            <h4>Dekorasi (Gedung/Hotel)</h4>
+            <ul>
+              <li>Dekor Pelaminan, Taman, Penuntun Jalan</li>
+              <li>Pargola Tengah 4×4 m, Photobooth</li>
+              <li>Pagar VIP, Lantai HPL, Lighting dekorasi</li>
+              <li>Lighting Fresnel & Beam</li>
+            </ul>
+            <h4>Dekorasi Rumah</h4>
+            <ul>
+              <li>Dekor Kamar Pengantin</li>
+              <li>Pelaminan (Akad/Mapacci) 4×3 m Tabere</li>
+              <li>Dekor kain dalam rumah (1 ruangan)</li>
+            </ul>
+            <h4>Free</h4>
+            <ul>
+              <li>1× Softlens, 1× Henna + Kuku</li>
+              <li>Makeup pendamping 1 Akad, 2 Resepsi</li>
+              <li>Kotak Seserahan 8 pcs + Hias</li>
+              <li>Baju Pagar Ayu 10, Bosara 12 pcs</li>
+            </ul>
+          </div>
+          <footer><a href="#kontak" class="btn btn-primary btn-block">Cek Ketersediaan</a></footer>
+        </article>
+
+        <!-- 2x3 -->
+        <article class="card price" tabindex="0">
+          <header>
+            <h3>Package 2×3</h3>
+            <div class="price-tag">Rp 22.000.000</div>
+          </header>
+          <div class="price-body">
+            <h4>Makeup & Pakaian</h4>
+            <ul>
+              <li>2× Makeup (Mapacci, Akad & Resepsi)</li>
+              <li>3× Pakaian (Mapacci, Akad & Resepsi)</li>
+              <li>Kelengkapan Hijab, Sendal Adat, Accessories</li>
+              <li>Handbucket, Makeup di Studio</li>
+            </ul>
+            <h4>Dekorasi (Gedung/Hotel)</h4>
+            <ul>
+              <li>Pelaminan, Taman, Penuntun Jalan</li>
+              <li>Pargola Tengah 4×4 m, Photobooth</li>
+              <li>Pagar VIP, Lantai HPL</li>
+              <li>Lighting Dekorasi, Fresnel, Beam</li>
+            </ul>
+            <h4>Dekorasi Rumah</h4>
+            <ul>
+              <li>Kamar Pengantin</li>
+              <li>Pelaminan (Akad/Mapacci) 4×3 m Tabere</li>
+              <li>Dekor kain dalam rumah (1 ruangan)</li>
+            </ul>
+            <h4>Free</h4>
+            <ul>
+              <li>1× Softlens, 1× Henna + Kuku</li>
+              <li>Makeup pendamping 2</li>
+              <li>Kotak Seserahan 8 pcs + Hias</li>
+              <li>Baju Pagar Ayu 10, Bosara 12 pcs</li>
+            </ul>
+          </div>
+          <footer><a href="#kontak" class="btn btn-primary btn-block">Cek Ketersediaan</a></footer>
+        </article>
+
+        <!-- 3x3 -->
+        <article class="card price" tabindex="0">
+          <header>
+            <h3>Package 3×3</h3>
+            <div class="price-tag">Rp 25.000.000</div>
+          </header>
+          <div class="price-body">
+            <h4>Makeup & Pakaian</h4>
+            <ul>
+              <li>3× Makeup (Mapacci, Akad & Resepsi)</li>
+              <li>3× Pakaian (Mapacci, Akad & Resepsi)</li>
+              <li>Kelengkapan Hijab, Sendal Adat, Accessories</li>
+              <li>Handbucket, Makeup di Studio</li>
+            </ul>
+            <h4>Dekorasi (Gedung/Hotel)</h4>
+            <ul>
+              <li>Pelaminan, Taman, Penuntun Jalan</li>
+              <li>Pargola Tengah 4×4 m, Photobooth</li>
+              <li>Pagar VIP, Lantai HPL</li>
+              <li>Lighting Dekorasi, Fresnel & 2 Lampu Beam</li>
+            </ul>
+            <h4>Dekorasi Rumah</h4>
+            <ul>
+              <li>Kamar Pengantin</li>
+              <li>Pelaminan (Akad/Mapacci) 4×3 m Tabere</li>
+              <li>Dekor kain dalam rumah (Ruang Tamu)</li>
+            </ul>
+            <h4>Free</h4>
+            <ul>
+              <li>1× Softlens, 1× Henna + Kuku</li>
+              <li>Makeup pendamping 2</li>
+              <li>Kotak Seserahan 8 pcs + Hias</li>
+              <li>Baju Pagar Ayu 10, Bosara 12 pcs</li>
+            </ul>
+          </div>
+          <footer><a href="#kontak" class="btn btn-primary btn-block">Cek Ketersediaan</a></footer>
+        </article>
+      </div>
+      <p class="subtle center">Catatan: Harga dapat berubah sesuai lokasi & permintaan khusus.</p>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      At Yanty Makeup Wedding, we bring your bridal dreams to life with timeless makeup artistry, bespoke decorations, and luxury wedding car experiences. 
-      Our passion is to create moments of elegance and everlasting memories.
-    </p>
+  <!-- Galeri -->
+  <section id="galeri" class="section gallery">
+    <div class="container">
+      <h2 class="sec-title center">Galeri Karya</h2>
+      <div class="gallery-grid">
+        <!-- Ganti semua src dengan fotomu -->
+        <img src="https://many-maroon-5xe2sqqcpu.edgeone.app/WhatsApp%20Image%202025-08-23%20at%2001.11.12.jpeg">
+        <img src="https://important-tan-yrguprogcf.edgeone.app/WhatsApp%20Image%202025-08-18%20at%2017.27.24.jpeg" alt="Makeup pengantin 2">
+        <img src="https://inevitable-green-36jylbbpnj.edgeone.app/WhatsApp%20Image%202025-08-17%20at%2017.37.23%20(1).jpeg" alt="Makeup pengantin 3">
+        <img src="https://elderly-green-bkp1hsdzy4.edgeone.app/DSC00878.jpg" alt="Makeup pengantin 4">
+        <img src="https://plastic-harlequin-odhpw1hhoq.edgeone.app/WhatsApp%20Image%202025-08-17%20at%2017.37.23%20(2).jpeg" alt="Makeup pengantin 5">
+        <img src="https://heavy-red-snrqaxo4pc.edgeone.app/IMG_6129.jpg" alt="Makeup pengantin 6">
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Let's plan your dream wedding together!</p>
-    <a href="https://www.instagram.com/yanty_makeup_wedding?igsh=Y3FuNTJqcnR6cWo0" target="_blank" class="btn">Visit Instagram</a>
+  <!-- Kontak / CTA -->
+  <section id="kontak" class="section contact">
+    <div class="container grid-2">
+      <div>
+        <h2 class="sec-title">Hubungi Kami</h2>
+        <p>Ingin konsultasi tampilan, cek ketersediaan tanggal, atau custom paket? Silakan hubungi kami:</p>
+        <ul class="contact-list">
+          <li><strong>WhatsApp:</strong> 0878-XXXX-XXXX</li>
+          <li><strong>Email:</strong> info@yantymakeupwedding.id</li>
+          <li><strong>Instagram:</strong> @yantymakeupwedding</li>
+          <li><strong>Studio:</strong> Jl. Nama Jalan No. 123, Kota</li>
+        </ul>
+      </div>
+      <form class="card form" onsubmit="return false;">
+        <label>Nama
+          <input type="text" placeholder="Nama lengkap" required>
+        </label>
+        <label>Email / WhatsApp
+          <input type="text" placeholder="Kontak yang bisa dihubungi" required>
+        </label>
+        <label>Tanggal & Lokasi
+          <input type="text" placeholder="cth: 21 Okt 2025, Hotel ABC">
+        </label>
+        <label>Pilih Paket
+          <select>
+            <option>Pilih paket…</option>
+            <option>Package 1×1</option>
+            <option>Package 1×2</option>
+            <option>Package 2×2</option>
+            <option>Package 2×3</option>
+            <option>Package 3×3</option>
+          </select>
+        </label>
+        <label>Pesan
+          <textarea rows="4" placeholder="Ceritakan kebutuhanmu"></textarea>
+        </label>
+        <button class="btn btn-primary btn-block">Kirim Pertanyaan</button>
+        <p class="tiny subtle">Dengan mengirim, Anda setuju untuk dihubungi oleh tim kami.</p>
+      </form>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Yanty Makeup Wedding | MUA </p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">
+        <span class="brand-mark">Y</span> Yanty Makeup Wedding
+      </div>
+      <div class="foot-right">
+        <span>© <span id="year"></span> Yanty Makeup Wedding. All rights reserved.</span>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="TikTok">TT</a>
+          <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
