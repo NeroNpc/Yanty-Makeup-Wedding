@@ -121,51 +121,46 @@ body{
 .card.price:focus-within .price-body,
 .card.price:hover .price-body{display:block}
 
-/* ====== Pembayaran / Rekening ====== */
-.payments { margin-top: 1rem; background: linear-gradient(180deg, rgba(20,20,22,0.08), transparent); }
-.bank-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 1.2rem 0;
-}
-.bank-card{
-  background: var(--card);
-  border: 1px solid var(--stroke);
-  padding: 1rem;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-}
-.bank-head{ display:flex;flex-direction:column; gap:.15rem }
-.bank-head strong{ font-size:1.02rem; letter-spacing:.04em }
-.bank-name{ font-size:.9rem; color:var(--muted) }
+// ====== Interaksi untuk Notes (expand/collapse) ======
+document.addEventListener("DOMContentLoaded", () => {
+  // Toggle untuk Catatan & Penambahan Khusus
+  const toggles = document.querySelectorAll(".note-toggle");
+  toggles.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const card = btn.parentElement;
+      card.classList.toggle("active");
+    });
+  });
 
-.acc-wrap{ display:flex; gap:.6rem; align-items:center; margin-top:.4rem }
-.acc-number{
-  background:#0f0f11;
-  padding:.5rem .7rem;
-  border-radius:8px;
-  border:1px solid #242427;
-  font-family:monospace;
-  font-weight:700;
-}
-.copy-btn{
-  border:0;padding:.55rem .7rem;border-radius:10px;cursor:pointer;font-weight:600;
-  background:linear-gradient(90deg,var(--primary),var(--primary-2)); color:#fff;
-  box-shadow:0 8px 16px rgba(0,0,0,.25);
-}
-.copy-btn:active{ transform:translateY(1px) }
-.payment-terms{ margin-top:1rem; background:transparent; padding:.8rem .8rem 0;border-radius:10px }
-.payment-terms h4{ margin:.2rem 0 .6rem }
-.payment-terms ul{ padding-left:1.2rem }
-.payment-terms li{ margin:.35rem 0; color:#d6d6d9 }
-
-/* Responsive */
-@media (max-width: 980px){
-  .bank-grid{ grid-template-columns: 1fr; }
-}
+  // Copy ke clipboard untuk nomor rekening
+  const copyButtons = document.querySelectorAll(".copy-btn");
+  copyButtons.forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const acc = btn.getAttribute("data-acc");
+      try {
+        await navigator.clipboard.writeText(acc);
+        const original = btn.textContent;
+        btn.textContent = "Tersalin ✓";
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.disabled = false;
+        }, 1500);
+      } catch (err) {
+        // fallback: select nomor di layar jika clipboard API gagal
+        const code = document.querySelector(`.acc-number[data-acc='${acc}']`);
+        if (code) {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+        alert("Gagal menyalin otomatis — silakan salin manual nomor rekening.");
+      }
+    });
+  });
+});
            
 /* Gallery */
 .gallery-grid{
