@@ -121,6 +121,70 @@ body{
 .card.price:focus-within .price-body,
 .card.price:hover .price-body{display:block}
 
+/* ====== BASE ====== */
+:root {
+  --bg:#0c0c0d;
+  --card:#141416;
+  --text:#f4f4f5;
+  --muted:#aaa;
+  --primary:#8b0f2f;
+  --stroke:#27272a;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background: linear-gradient(180deg,#000 0%, #0a0a0b 25%, var(--bg) 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(700px, 92%);
+  margin-inline: auto;
+}
+
+.center { text-align: center; }
+.subtle { color: var(--muted); }
+.sec-title {
+  font-family: 'Bellefair', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin-bottom: .7rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* ====== NOTE CARD ====== */
+.note-card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+}
+.note-title {
+  font-family: 'Bellefair', serif;
+  font-size: 1.4rem;
+  margin-bottom: .8rem;
+  color: #fff;
+}
+.note-body ul {
+  padding-left: 1.2rem;
+}
+.note-body li {
+  margin: .5rem 0;
+  color: #ddd;
+  font-size: .96rem;
+  line-height: 1.5;
+}
+.note-body strong {
+  color: #f7d9a4;
+}
+
 /* ====== Pembayaran / Rekening ====== */
 .payments { margin-top: 1rem; background: linear-gradient(180deg, rgba(20,20,22,0.08), transparent); }
 .bank-grid {
